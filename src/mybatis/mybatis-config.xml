@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="useGeneratedKeys" value="false"/>
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="25"/>
+        <setting name="safeRowBoundsEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
+        <setting name="localCacheScope" value="SESSION"/>
+        <setting name="jdbcTypeForNull" value="OTHER"/>
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+    </settings>
+    <typeAliases>
+        <package name="test.pojo"/>
+    </typeAliases>
+    <mappers>
+        <!-- 通过package元素将会把指定包下面的所有Mapper接口进行注册 -->
+        <package name="test.mapper"/>
+        <!-- 通过mapper元素的resource属性可以指定一个相对于类路径的Mapper.xml文件 -->
+        <!--
+        <mapper resource="com/tiantian/mybatis/mapper/UserMapper.xml"/>
+        -->
+        <!-- 通过mapper元素的url属性可以指定一个通过URL请求道的Mapper.xml文件 -->
+        <!--
+        <mapper url="file:///E:/UserMapper.xml"/>
+        -->
+        <!-- 通过mapper元素的class属性可以指定一个Mapper接口进行注册 -->
+        <!--
+        <mapper class="test.pojo.StaffManager"/>
+        -->
+    </mappers>
+</configuration>
