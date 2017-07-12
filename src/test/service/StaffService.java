@@ -2,7 +2,6 @@ package test.service;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.stereotype.Service;
 import test.mapper.StaffManagerMapper;
 import test.mapper.StaffManagerSqlProvider;
@@ -50,5 +49,10 @@ public class StaffService {
 
         bResult = true;
         return bResult;
+    }
+
+    public String getStaffByMp(String staffId){
+        String sResult = "";
+        return sResult;
     }
 }
